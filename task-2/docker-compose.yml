@@ -1,0 +1,11 @@
+version: "3"
+services:
+  node:
+    image: "node:latest"
+    user: "node"
+    working_dir: /lite-server
+    volumes:
+      - ./:/lite-server
+    ports: 
+        - 7000:3000
+    command: bash script_pipe.sh
